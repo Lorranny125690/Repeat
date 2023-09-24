@@ -1,0 +1,179 @@
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <locale.h>
+
+
+
+int main() {
+
+
+
+	system("clear");
+
+
+
+	int a, b = 0, t = 0;
+
+
+
+	setlocale(LC_ALL, "portuguese");
+
+
+
+	printf("\t \tPara que serve estrutura de repetição?");
+
+
+
+	printf("\n");
+
+	printf("\n");
+
+
+
+	printf("\tEstruturas de repetição são feitas para repetir elementos \n\tsem precisarmos repetir várias tal elemento. \n\tAperte \n\t1 - While \n\t2 - For\n\t3 - Do while\n");
+
+	printf("\t");
+
+	scanf("%d", &a);
+
+
+
+	system("clear");
+
+
+
+	switch (a) {
+
+	case 1:
+
+		printf("\t\t\tWhile\n");
+
+		printf("Exemplo: \n");
+
+
+
+		printf("while(t<=7){\n\tprintf('d * d = d', b, t, t*b)\n\tt++;\n\tb++;\n}\n");
+
+		printf("\n");
+
+
+
+		printf("Resultado: ");
+
+		printf("\n");
+
+		while (b <= 7) {
+
+
+
+			printf("%d * %d = %d\n", b, t, b * t);
+
+			t++;
+
+			b++;
+
+		}
+
+		break;
+
+	case 2:
+
+		printf("\t\t\tFor\n");
+
+		printf("Exemplo: \n");
+
+
+
+		printf("for (int i = 0; i <= 7; i++) {\n\tprintf('d * d = d', i, b, b * i); b++;\n}\n");
+
+		printf("\n");
+
+
+
+		printf("Resultado: \n");
+
+		printf("\n");
+
+
+
+		for (int i = 0; i <= 7; i++) {
+
+			printf("%d * %d = %d\n", i, b, b * i);
+
+			b++;
+
+		}
+
+		break;
+
+	case 3:
+
+
+
+		printf("\t\t\tDo While\n");
+
+		printf("Exemplo: \n");
+
+
+
+		printf("do {\n\tprintf('d * d = d', b, t, t*b)\n\tt++;\n\tb++;\n} while(t<=7)\n");
+
+		printf("\n");
+
+
+
+		printf("Resultado: ");
+
+		printf("\n");
+
+
+
+		do {
+
+			printf("%d * %d = %d\n", b, t, b * t);
+
+			t++;
+
+			b++;
+
+		} while (t <= 7);
+
+
+
+		break;
+
+
+
+	}
+
+
+
+	int c;
+
+
+
+	printf("Deseja ver novamente? Aperte 1 para sim e 2 para não.\n");
+
+	scanf("%d", &c);
+
+
+
+	switch(c){
+
+
+
+		case 1:
+
+			return main();
+
+		case 2:
+
+			return 0;
+
+	}
+
+
+
+}
